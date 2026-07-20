@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio profesional Andy Mohammad Teguh — Dosen Teknik Informatika, Web Developer, AI & Machine Learning Researcher, serta IT Infrastructure Specialist." />
+  <meta name="keywords" content="Andy Mohammad Teguh, Teknik Informatika, Dosen, Web Developer, Laravel, Node.js, Machine Learning, Deep Learning, AI, MTCNA" />
+  <meta name="author" content="Andy Mohammad Teguh" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Andy Mohammad Teguh | Informatics Lecturer & Technology Professional</title>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0c1929;
+      --card: rgba(255,255,255,.055);
+      --card-strong: rgba(255,255,255,.085);
+      --line: rgba(255,255,255,.11);
+      --text: #f3f7fb;
+      --muted: #a8b6c7;
+      --primary: #4dd8c8;
+      --primary-strong: #25b7a7;
+      --secondary: #7cb7ff;
+      --shadow: 0 24px 70px rgba(0,0,0,.28);
+      --radius: 22px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(77,216,200,.13), transparent 30%),
+        radial-gradient(circle at 88% 15%, rgba(124,183,255,.12), transparent 26%),
+        linear-gradient(180deg, #07111f 0%, #091522 52%, #07111f 100%);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin-inline: auto;
+    }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(7,17,31,.72);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .nav-wrap {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #06111d;
+      font-size: 15px;
+      box-shadow: 0 10px 30px rgba(77,216,200,.2);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      padding: 10px 16px;
+      border: 1px solid rgba(77,216,200,.35);
+      border-radius: 999px;
+      color: var(--primary) !important;
+      background: rgba(77,216,200,.07);
+    }
+
+    .menu-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100svh;
+      padding: 132px 0 70px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(77,216,200,.08);
+      border: 1px solid rgba(77,216,200,.2);
+      color: #bff7ef;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--primary);
+      box-shadow: 0 0 0 6px rgba(77,216,200,.08);
+    }
+
+    h1 {
+      margin: 24px 0 18px;
+      font-size: clamp(48px, 7vw, 88px);
+      line-height: .98;
+      letter-spacing: -.06em;
+      max-width: 850px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary), #9ed3ff 65%, #d7e8ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 720px;
+      font-size: clamp(18px, 2vw, 22px);
+      color: #c7d3df;
+      margin: 0 0 20px;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 750;
+      transition: .25s ease;
+    }
+
+    .btn-primary {
+      color: #06111d;
+      background: linear-gradient(135deg, var(--primary), #8fc8ff);
+      box-shadow: 0 14px 30px rgba(77,216,200,.17);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: rgba(255,255,255,.035);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,.07);
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 520px;
+      padding: 28px;
+      border-radius: 32px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      top: -110px;
+      right: -90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(77,216,200,.32), transparent 68%);
+    }
+
+    .portrait {
+      width: 132px;
+      height: 132px;
+      border-radius: 32px;
+      display: grid;
+      place-items: center;
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -.05em;
+      color: #07111f;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      margin-bottom: 28px;
+      box-shadow: 0 20px 45px rgba(77,216,200,.16);
+    }
+
+    .mini-label {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .hero-card h2 {
+      font-size: 28px;
+      margin: 8px 0 6px;
+      letter-spacing: -.03em;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      margin: 0 0 22px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      font-size: 14px;
+    }
+
+    .info-item span:first-child { color: var(--muted); }
+    .info-item strong { text-align: right; }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid var(--line);
+      color: #d8e2ec;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    section { padding: 90px 0; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 50px;
+      margin-bottom: 42px;
+      align-items: end;
+    }
+
+    .kicker {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -.05em;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      margin: 0;
+      max-width: 680px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .stat {
+      padding: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      letter-spacing: -.04em;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: 0 18px 50px rgba(0,0,0,.12);
+    }
+
+    .card:hover {
+      background: var(--card-strong);
+      border-color: rgba(77,216,200,.23);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: -.02em;
+    }
+
+    .timeline-item .org {
+      color: #c9d5e1;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .period {
+      white-space: nowrap;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(77,216,200,.08);
+      border: 1px solid rgba(77,216,200,.14);
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .degree {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .degree-mark {
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(124,183,255,.1);
+      border: 1px solid rgba(124,183,255,.18);
+      color: #b9d8ff;
+      font-weight: 850;
+    }
+
+    .degree h3 {
+      margin: 0 0 4px;
+      font-size: 20px;
+    }
+
+    .degree .meta {
+      color: var(--primary);
+      font-weight: 750;
+      font-size: 14px;
+    }
+
+    .degree p {
+      color: var(--muted);
+      margin: 10px 0 0;
+      font-size: 14px;
+    }
+
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+
+    .pub-card {
+      min-height: 245px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+    }
+
+    .pub-card .tag {
+      color: var(--secondary);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 850;
+    }
+
+    .pub-card h3 {
+      font-size: 18px;
+      line-height: 1.45;
+      margin: 16px 0 24px;
+      letter-spacing: -.015em;
+    }
+
+    .pub-link {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .skills-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .skill-group h3 { margin-top: 0; }
+
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .skill-pill {
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid var(--line);
+      color: #d9e3ec;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .contact-box {
+      padding: 48px;
+      border-radius: 30px;
+      border: 1px solid rgba(77,216,200,.22);
+      background:
+        linear-gradient(135deg, rgba(77,216,200,.09), rgba(124,183,255,.06)),
+        rgba(255,255,255,.025);
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .contact-box h2 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -.05em;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 650px;
+    }
+
+    .contact-actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    footer {
+      padding: 32px 0 46px;
+      color: #7f90a4;
+      font-size: 13px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    @media (max-width: 1200px) {
+      .stats { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-head,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 120px;
+      }
+
+      .hero-card { min-height: auto; }
+
+      .stats { grid-template-columns: repeat(2, 1fr); }
+
+      .pub-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: min(calc(100% - 28px), var(--max)); }
+
+      .menu-btn { display: grid; place-items: center; }
+
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 14px;
+        right: 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 14px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(7,17,31,.96);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 10px; }
+      .nav-cta { text-align: center; }
+
+      .hero-grid { gap: 28px; }
+      h1 { font-size: clamp(46px, 14vw, 70px); }
+
+      .hero-card { padding: 22px; border-radius: 24px; }
+      .portrait { width: 104px; height: 104px; border-radius: 26px; font-size: 34px; }
+
+      section { padding: 68px 0; }
+      .grid-2,
+      .skills-wrap,
+      .pub-grid,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-top { flex-direction: column; }
+      .period { white-space: normal; }
+
+      .contact-box { padding: 28px; border-radius: 24px; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+
+      .info-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+      .info-item strong { text-align: left; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Navigasi utama">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">
+        <span class="brand-mark">AMT</span>
+        <span>Andy Mohammad Teguh</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">Tentang</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#publications">Publikasi</a>
+        <a href="#hki">HKI</a>
+        <a href="#skills">Keahlian</a>
+        <a class="nav-cta" href="#contact">Hubungi Saya</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Open for academic & technology collaboration</span>
+
+          <h1>
+            Bridging
+            <span class="gradient-text">Academia, AI & Software Engineering.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Dosen Teknik Informatika, praktisi pengembangan aplikasi web, peneliti AI & Machine Learning,
+            serta profesional infrastruktur jaringan.
+          </p>
+
+          <p class="hero-copy">
+            Saya menggabungkan pengalaman akademik, pengajaran, pengembangan perangkat lunak, manajemen IT,
+            dan riset berbasis data untuk membangun solusi teknologi yang relevan, terukur, dan berdampak.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience">Lihat Pengalaman</a>
+            <a class="btn btn-secondary" href="mailto:andymohammadd@gmail.com">Kirim Email</a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" aria-label="Ringkasan profil">
+          <div class="portrait" aria-label="Inisial Andy Mohammad Teguh">AMT</div>
+          <div class="mini-label">Professional Profile</div>
+          <h2>Andy Mohammad Teguh</h2>
+          <p>M.T. Informatika · Lecturer · Developer · AI/ML Researcher</p>
+
+          <div class="info-list">
+            <div class="info-item"><span>Lokasi</span><strong>Sidoarjo, Jawa Timur</strong></div>
+            <div class="info-item"><span>Peran Akademik</span><strong>Dosen S-1 Teknik Informatika</strong></div>
+            <div class="info-item"><span>Bidang Utama</span><strong>Web, AI/ML, Network & Server</strong></div>
+            <div class="info-item"><span>Email</span><strong>andymohammadd@gmail.com</strong></div>
+          </div>
+
+          <div class="social-row">
+            <a class="chip" href="https://orcid.org/0009-0005-8452-2379" target="_blank" rel="noopener">ORCID</a>
+            <a class="chip" href="https://www.scopus.com/authid/detail.uri?authorId=59094316200" target="_blank" rel="noopener">Scopus</a>
+            <a class="chip" href="https://wa.me/6285850860036" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">Tentang Saya</div>
+            <h2 class="section-title">Akademisi yang tetap dekat dengan praktik industri.</h2>
+          </div>
+          <p class="section-desc">
+            Lulusan Magister Teknik Informatika Institut Teknologi Sepuluh Nopember dengan pengalaman mengajar
+            lebih dari lima tahun di bidang kejuruan dan informatika. Fokus profesional meliputi pengembangan
+            aplikasi web, infrastruktur jaringan, machine learning, deep learning, dan integrasi kecerdasan buatan.
+          </p>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><strong>5+ Tahun</strong><span>Pengalaman mengajar</span></div>
+          <div class="stat"><strong>S-2</strong><span>Teknik Informatika · ITS</span></div>
+          <div class="stat"><strong>3+</strong><span>Publikasi ilmiah terindeks</span></div>
+          <div class="stat"><strong>MTCNA</strong><span>Sertifikasi jaringan MikroTik</span></div>
+          <div class="stat"><strong>2 HKI</strong><span>Program komputer terdaftar</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">Pengalaman Profesional</div>
+            <h2 class="section-title">Lintas pendidikan, industri, dan layanan teknologi.</h2>
+          </div>
+          <p class="section-desc">
+            Rekam jejak profesional dibangun dari pengalaman mengajar, pengelolaan teknologi informasi,
+            pengembangan aplikasi, dukungan infrastruktur, dan kepemimpinan usaha digital.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-top">
+              <div>
+                <h3>Dosen S-1 Teknik Informatika</h3>
+                <div class="org">Universitas Muhammadiyah Gresik</div>
+              </div>
+              <span class="period">Feb 2026 — Sekarang</span>
+            </div>
+            <p>
+              Mengajar pada Program Studi S-1 Teknik Informatika dengan fokus pada penguatan pembelajaran,
+              kompetensi teknologi, dan keterhubungan antara teori akademik dengan praktik pengembangan sistem.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-top">
+              <div>
+                <h3>Pemilik & Pengembang Aplikasi</h3>
+                <div class="org">CV Tekno Solusi Digital</div>
+              </div>
+              <span class="period">2023 — Sekarang</span>
+            </div>
+            <p>
+              Mengelola solusi digital dan pengembangan aplikasi, termasuk perencanaan kebutuhan sistem,
+              implementasi teknologi web, pemecahan masalah teknis, dan pengelolaan proyek.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-top">
+              <div>
+                <h3>Guru Informatika & Penanggung Jawab IT</h3>
+                <div class="org">MAN Sidoarjo</div>
+              </div>
+              <span class="period">2019 — Sekarang</span>
+            </div>
+            <p>
+              Melaksanakan pembelajaran informatika sekaligus mendukung pengelolaan sistem, jaringan,
+              dan kebutuhan teknologi informasi institusi.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-top">
+              <div>
+                <h3>Helpdesk Ujian Nasional</h3>
+                <div class="org">Dinas Pendidikan Kabupaten Sidoarjo</div>
+              </div>
+              <span class="period">2018 — 2022</span>
+            </div>
+            <p>
+              Memberikan dukungan teknis, troubleshooting, dan penyelesaian kendala operasional terkait
+              pelaksanaan ujian berbasis komputer.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-top">
+              <div>
+                <h3>Guru Kejuruan Teknik Komputer & Jaringan</h3>
+                <div class="org">Sekolah Menengah Kejuruan</div>
+              </div>
+              <span class="period">2015 — 2020</span>
+            </div>
+            <p>
+              Mengajar kompetensi teknik komputer dan jaringan serta membangun fondasi praktis pada
+              administrasi jaringan, server, dan infrastruktur teknologi.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">Pendidikan</div>
+            <h2 class="section-title">Fondasi akademik di bidang informatika dan komputasi.</h2>
+          </div>
+          <p class="section-desc">
+            Pendidikan formal berfokus pada teknik informatika, analisis data, sistem komputasi,
+            dan pengembangan solusi teknologi berbasis penelitian.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card degree reveal">
+            <div class="degree-mark">S2</div>
+            <div>
+              <h3>Institut Teknologi Sepuluh Nopember</h3>
+              <div class="meta">Teknik Informatika · 2023–2025 · IPK 3,75</div>
+              <p>
+                Tesis: Analisis Data Panel pada Kinerja Keuangan Menggunakan Metode Regresi Statistik,
+                Machine Learning, dan Deep Learning.
+              </p>
+            </div>
+          </article>
+
+          <article class="card degree reveal">
+            <div class="degree-mark">S1</div>
+            <div>
+              <h3>Universitas Muhammadiyah Sidoarjo</h3>
+              <div class="meta">Teknik Informatika · 2015–2019 · IPK 3,27</div>
+              <p>
+                Skripsi: Membangun Sistem Private Cloud Computing dengan Implementasi Infrastructure as a Service
+                Menggunakan Server Lokal Sekolah.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">Publikasi & Penelitian</div>
+            <h2 class="section-title">Riset pada AI, data, tata kelola IT, dan pendidikan teknologi.</h2>
+          </div>
+          <p class="section-desc">
+            Minat riset mencakup machine learning, deep learning, analisis data panel,
+            tata kelola teknologi informasi, project management, dan teknologi pembelajaran.
+          </p>
+        </div>
+
+        <div class="pub-grid">
+          <article class="pub-card reveal">
+            <div>
+              <span class="tag">On Review</span>
+              <h3>Hybrid Feature Selection Using Statistical Models and Machine Learning for Company Asset and Equity Prediction with Panel Data</h3>
+            </div>
+            <span class="pub-link">MJCS Malaysia</span>
+          </article>
+
+          <article class="pub-card reveal">
+            <div>
+              <span class="tag">IEEE Publication</span>
+              <h3>Towards Optimal Learning: A Study on the Integration of EVE-NG Virtual Lab for Improved Computer Networking Education in Secondary Schools</h3>
+            </div>
+            <a class="pub-link" href="https://doi.org/10.1109/ic-ETITE58242.2024.10493781" target="_blank" rel="noopener">Buka DOI ↗</a>
+          </article>
+
+          <article class="pub-card reveal">
+            <div>
+              <span class="tag">IEEE Publication</span>
+              <h3>Optimizing IT Governance and Project Management in Software Development through AI Integration and COBIT 2019 Framework</h3>
+            </div>
+            <a class="pub-link" href="https://doi.org/10.1109/ICTIIA61827.2024.10761914" target="_blank" rel="noopener">Buka DOI ↗</a>
+          </article>
+
+          <article class="pub-card reveal">
+            <div>
+              <span class="tag">IEEE Publication</span>
+              <h3>Advanced Deep Learning and Hybrid Models for Forecasting Rice Production in Indonesia</h3>
+            </div>
+            <a class="pub-link" href="https://doi.org/10.1109/ICITACEE62763.2024.10762812" target="_blank" rel="noopener">Buka DOI ↗</a>
+          </article>
+
+          <article class="pub-card reveal">
+            <div>
+              <span class="tag">Research Identity</span>
+              <h3>ORCID Researcher Profile</h3>
+            </div>
+            <a class="pub-link" href="https://orcid.org/0009-0005-8452-2379" target="_blank" rel="noopener">Lihat ORCID ↗</a>
+          </article>
+
+          <article class="pub-card reveal">
+            <div>
+              <span class="tag">Research Identity</span>
+              <h3>Scopus Author Profile</h3>
+            </div>
+            <a class="pub-link" href="https://www.scopus.com/authid/detail.uri?authorId=59094316200" target="_blank" rel="noopener">Lihat Scopus ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="hki">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">Hak Kekayaan Intelektual</div>
+            <h2 class="section-title">Karya perangkat lunak yang telah tercatat sebagai ciptaan.</h2>
+          </div>
+          <p class="section-desc">
+            Kontribusi pengembangan teknologi tidak hanya diwujudkan melalui publikasi ilmiah,
+            tetapi juga melalui program komputer yang telah memperoleh pencatatan Hak Cipta
+            dari Direktorat Jenderal Kekayaan Intelektual Republik Indonesia.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card reveal">
+            <div class="kicker">Program Komputer · 2025</div>
+            <h3 style="font-size:24px; margin:0 0 12px; letter-spacing:-.03em;">
+              PadiSmart+: Aplikasi Cerdas untuk Monitoring dan Pengendalian Pertanian Padi
+            </h3>
+            <p style="color:var(--muted); margin:0 0 18px;">
+              Andy Mohammad Teguh tercantum sebagai salah satu pencipta pada karya perangkat lunak
+              PadiSmart+, sebuah aplikasi cerdas untuk mendukung monitoring dan pengendalian pertanian padi.
+            </p>
+            <div class="info-list" style="margin-top:0;">
+              <div class="info-item"><span>Nomor Permohonan</span><strong>EC002025146590</strong></div>
+              <div class="info-item"><span>Nomor Pencatatan</span><strong>000986851</strong></div>
+              <div class="info-item"><span>Tanggal Permohonan</span><strong>5 Oktober 2025</strong></div>
+              <div class="info-item"><span>Pemegang Hak Cipta</span><strong>Madrasah Aliyah Negeri Sidoarjo</strong></div>
+            </div>
+            <div class="hero-actions" style="margin-top:22px;">
+              <a class="btn btn-secondary" href="assets/hki/HKI-PadiSmart-2025.pdf" target="_blank" rel="noopener">
+                Lihat Sertifikat HKI
+              </a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="kicker">Program Komputer · 2024</div>
+            <h3 style="font-size:24px; margin:0 0 12px; letter-spacing:-.03em;">
+              SIKOMA — Sistem Informasi Kompetensi Magang
+            </h3>
+            <p style="color:var(--muted); margin:0 0 18px;">
+              Andy Mohammad Teguh tercantum sebagai salah satu pencipta SIKOMA,
+              yaitu Sistem Informasi Kompetensi Magang yang telah memperoleh pencatatan Hak Cipta.
+            </p>
+            <div class="info-list" style="margin-top:0;">
+              <div class="info-item"><span>Nomor Permohonan</span><strong>EC002024250050</strong></div>
+              <div class="info-item"><span>Nomor Pencatatan</span><strong>000822482</strong></div>
+              <div class="info-item"><span>Tanggal Permohonan</span><strong>12 Desember 2024</strong></div>
+              <div class="info-item"><span>Pemegang Hak Cipta</span><strong>LPPM — Universitas Negeri Surabaya</strong></div>
+            </div>
+            <div class="hero-actions" style="margin-top:22px;">
+              <a class="btn btn-secondary" href="assets/hki/HKI-SIKOMA-2024.pdf" target="_blank" rel="noopener">
+                Lihat Sertifikat HKI
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">Keahlian</div>
+            <h2 class="section-title">Technical depth dengan pendekatan problem-solving.</h2>
+          </div>
+          <p class="section-desc">
+            Kombinasi kompetensi pengembangan aplikasi, data & AI, jaringan & server,
+            serta pengalaman manajemen dan pengajaran.
+          </p>
+        </div>
+
+        <div class="skills-wrap">
+          <article class="card skill-group reveal">
+            <h3>Technical Skills</h3>
+            <div class="skill-cloud">
+              <span class="skill-pill">Laravel</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Flask</span>
+              <span class="skill-pill">PHP</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">SQL Server</span>
+              <span class="skill-pill">Machine Learning</span>
+              <span class="skill-pill">Deep Learning</span>
+              <span class="skill-pill">Panel Data Analysis</span>
+              <span class="skill-pill">Statistical Regression</span>
+              <span class="skill-pill">Private Cloud</span>
+              <span class="skill-pill">Infrastructure as a Service</span>
+              <span class="skill-pill">Network & Server Management</span>
+              <span class="skill-pill">MikroTik</span>
+            </div>
+          </article>
+
+          <article class="card skill-group reveal">
+            <h3>Professional Skills</h3>
+            <div class="skill-cloud">
+              <span class="skill-pill">Teaching</span>
+              <span class="skill-pill">Project Management</span>
+              <span class="skill-pill">IT Operations</span>
+              <span class="skill-pill">Technical Troubleshooting</span>
+              <span class="skill-pill">Research</span>
+              <span class="skill-pill">Scientific Writing</span>
+              <span class="skill-pill">Problem Solving</span>
+              <span class="skill-pill">Business Ownership</span>
+              <span class="skill-pill">Bahasa Indonesia</span>
+              <span class="skill-pill">English</span>
+              <span class="skill-pill">Arabic — Passive</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid-2" style="margin-top:18px">
+          <article class="card reveal">
+            <div class="kicker">Certification</div>
+            <h3>MikroTik Certified Network Associate (MTCNA)</h3>
+            <p style="color:var(--muted); margin-bottom:0;">
+              Sertifikasi kompetensi dasar jaringan MikroTik dan administrasi jaringan.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="kicker">Certification</div>
+            <h3>HACKTIV8 — AI Productivity & AI API Integration for Developers</h3>
+            <p style="color:var(--muted); margin-bottom:0;">
+              Penguatan kemampuan pemanfaatan AI untuk produktivitas dan integrasi API dalam pengembangan aplikasi.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div>
+            <div class="kicker">Mari Terhubung</div>
+            <h2>Terbuka untuk kolaborasi akademik, riset, dan pengembangan teknologi.</h2>
+            <p>
+              Untuk diskusi mengenai pengajaran, riset AI/ML, pengembangan aplikasi web,
+              infrastruktur IT, atau kerja sama profesional, silakan hubungi saya melalui kanal berikut.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:andymohammadd@gmail.com">andymohammadd@gmail.com</a>
+            <a class="btn btn-secondary" href="https://wa.me/6285850860036" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-secondary" href="https://orcid.org/0009-0005-8452-2379" target="_blank" rel="noopener">ORCID Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> Andy Mohammad Teguh. All rights reserved.</span>
+      <span>Informatics · AI/ML · Web Development · IT Infrastructure</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
