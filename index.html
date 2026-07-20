@@ -349,7 +349,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 14px;
       margin-top: 30px;
     }
@@ -600,6 +600,11 @@
     }
 
 
+
+    @media (max-width: 1350px) {
+      .stats { grid-template-columns: repeat(3, 1fr); }
+    }
+
     @media (max-width: 1200px) {
       .stats { grid-template-columns: repeat(3, 1fr); }
     }
@@ -731,7 +736,7 @@
           <div class="portrait" aria-label="Inisial Andy Mohammad Teguh">AMT</div>
           <div class="mini-label">Professional Profile</div>
           <h2>Andy Mohammad Teguh</h2>
-          <p>M.T. Informatika · Lecturer · Informatics Teacher · Developer · AI/ML Researcher</p>
+          <p>M.T. Informatika · Guru (Gr.) TIK · Lecturer · Informatics Teacher · Developer · AI/ML Researcher</p>
 
           <div class="info-list">
             <div class="info-item"><span>Lokasi</span><strong>Sidoarjo, Jawa Timur</strong></div>
@@ -771,6 +776,7 @@
           <div class="stat"><strong>3+</strong><span>Publikasi ilmiah terindeks</span></div>
           <div class="stat"><strong>MTCNA</strong><span>Sertifikasi jaringan MikroTik</span></div>
           <div class="stat"><strong>2 HKI</strong><span>Program komputer terdaftar</span></div>
+          <div class="stat"><strong>Guru (Gr.)</strong><span>Sertifikat Pendidik TIK</span></div>
         </div>
       </div>
     </section>
@@ -1101,6 +1107,29 @@
               Penguatan kemampuan pemanfaatan AI untuk produktivitas dan integrasi API dalam pengembangan aplikasi.
             </p>
           </article>
+
+          <article class="card reveal">
+            <div class="kicker">Professional Educator Certification</div>
+            <h3>Sertifikat Pendidik — Guru (Gr.) Teknologi Informasi dan Komunikasi</h3>
+            <p style="color:var(--muted); margin-bottom:18px;">
+              Telah menyelesaikan Pendidikan Profesi Guru dan dinyatakan lulus Uji Kompetensi Mahasiswa
+              Pendidikan Profesi Guru. Berdasarkan sertifikat yang diterbitkan melalui Universitas Negeri Makassar,
+              memperoleh sebutan profesi Guru (Gr.) bidang Teknologi Informasi dan Komunikasi.
+            </p>
+            <div class="info-list" style="margin-top:0;">
+              <div class="info-item"><span>Nomor Sertifikat</span><strong>001036869042025211017</strong></div>
+              <div class="info-item"><span>Institusi</span><strong>Universitas Negeri Makassar</strong></div>
+              <div class="info-item"><span>Tanggal</span><strong>31 Oktober 2025</strong></div>
+              <div class="info-item"><span>Bidang Profesi</span><strong>Teknologi Informasi dan Komunikasi</strong></div>
+            </div>
+            <div class="hero-actions" style="margin-top:22px;">
+              <a class="btn btn-secondary" href="assets/certificates/Sertifikat-Pendidik-Andy-Mohammad-Teguh-2025.pdf"
+                 target="_blank" rel="noopener">
+                Lihat Sertifikat Pendidik
+              </a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
